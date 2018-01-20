@@ -241,12 +241,12 @@ footer{
 
 /* Media Queries */
 @media(max-width: 768px){
+    
     header #branding,
     header nav,
     header nav li,
     #newsletter h1,
     #newsletter form,
-    #boxes .box,
     article#main-col,
     article#sidebar{
         float: none;
@@ -254,6 +254,18 @@ footer{
         width: 100%;
     }
 
+    #boxes .box{
+        float: none;
+        text-align: center;
+        width: 80%;
+    }
+
+    aside#sidebar{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    
     header{
         padding-bottom: 20px;
     }
@@ -274,13 +286,12 @@ footer{
 
    .container .wrapper{
       display:grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 0.75fr;
       grid-auto-rows: 400px;
       justify-items: center;
-      grid-gap:1em;
+      grid-gap: 1em;
+      
     }
-
-
 }
 
 
