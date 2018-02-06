@@ -10,30 +10,75 @@
 </head>
 
 <body>
-    <div class="card">
-        <h3>Bank of Mohamed</h3>
-        <img src="img/card_chip.png" alt="card chip" width="95" height="95">
+    <div class="container">
+        <h1> - Fake Credit or Debit Card</h1>
+        <div class="card">
+            <h3>Bank of Mohamed</h3>
 
-        <div class="card-number">
-            <a href="">4444</a>
-            <a href="">5555</a>
-            <a href="">6666</a>
-            <a href="">7777</a>
+            <img src="img/card_chip.png" alt="card chip" width="92" height="92">
+
+            <div class="card-number">
+                <a href="" id="a1"></a>
+                <a href="" id="a1"></a>
+                <a href="" id="a1"></a>
+                <a href="" id="a1"></a>
+            </div>
+
+            <ul>
+                <li><a>DEBIT</a></li>
+                <li><a id="Experiration">/</a></li>
+                <li><a>GOODTHRU</a></li>
+            </ul>
+
+            <h4>Mamadou A Diallo</h4>
+            <h1>VISA</h1>
         </div>
 
-        <div class="expiration-date">
-            <label>GOODTHRU</label>
-            <a href="#">09/18</a>
-        </div>
+        <div class="card-input">
+            <div>
+                <label>Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="Enter card number..">
+            </div>
 
-        <div class="name">
-            <label>Mohamed Koanda</label>
+            <div>
+                <label>Card Holder Name:</label>
+                <input type="text" placeholder="Enter full Name..">
+            </div>
+
+            <div>
+                <label>Card Experition:</label>
+                <input type="text" placeholder="MM/DD..">
+            </div>
+
+            <div>
+                <button>Reset</button>
+            </div>
         </div>
     </div>
 
-    <div class="card-input">
-        <input type="text" placeholder="card number..">
-    </div>
+    <script>
+        var a1 = document.getElementById("a1");
+        var a2 = document.getElementById("a1");
+
+        var cardNumber = document.getElementById("cardNumber");
+
+        cardNumber.addEventListener("keyup", function() {
+            var number = cardNumber.value;
+
+            for (i = 0; i < number.length; i++) {
+
+                if (i <= 3) {
+                    a1.innerHTML = number;
+                } else if (i <= 7) {
+                    a2.innerHTML = number;
+                }
+
+            }
+
+
+        });
+    </script>
+
 
 </body>
 
