@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Area | Account Login</title>
+    <title>Admin Area | Edit Sessions</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+    <?php include 'functions/functions.php';?>
 </head>
 
 <body>
@@ -26,7 +27,15 @@
                 <a class="navbar-brand" href="index.html">EOP Database</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
-
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="students.html">Students</a></li>
+                    <li><a href="sessions.html">Sessions</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Welcome, Med</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
             </div>
             <!--/.nav-collapse -->
         </div>
@@ -35,32 +44,28 @@
     <header id="header">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h1 class="text-center">Admin Area <small>Account Login</small></h1>
+                <div class="col-md-10">
+                    <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Edit Sessions <small></small></h1>
                 </div>
-
             </div>
         </div>
     </header>
 
 
+    <section id="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="sessions.html">Sessions</a></li>
+                <li class="active">Edit Session</li>
+            </ol>
+        </div>
+    </section>
+
     <section id="main">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-md-offset-4">
-                    <!-- col-md-offset-4 move over columns -->
-                    <form id="login" action="index.html" class="well">
-                        <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="text" class="form-control" placeholder="Enter Email">
-                        </div>
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" class="form-control" placeholder="Password">
-                        </div>
-                        <button type="submit" class="btn btn-default btn-block">Login</button>
-                    </form>
-                </div>
+              <?php sessionsFrom() ?>
             </div>
         </div>
     </section>
@@ -69,9 +74,6 @@
     <footer id="footer">
         <p>Copyright EOP Database, &copy; 2018</p>
     </footer>
-
-    <!-- Modals -->
-
 
     <script>
         CKEDITOR.replace('editor1');
@@ -84,10 +86,3 @@
 </body>
 
 </html>
-
-<!--
-
-<?php if(): ?>
-
-
-<?php endif; ?>
