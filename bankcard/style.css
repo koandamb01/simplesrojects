@@ -11,9 +11,13 @@ body {
     margin: auto;
 }
 
+p {
+    color: red;
+    text-align: center;
+}
+
 .container h1 {
     background: #b3d1ff;
-    padding: 8px;
     border: 1px solid #b3d1ff;
     box-shadow: 0px 2px;
 }
@@ -98,5 +102,11 @@ li a {
     margin-left: 84%;
     width: 100px;
     height: 30px;
+    border-radius: 5px;
+}
+
+.border h1 {
+    background: #333;
+    box-shadow: 0px 0px;
     border-radius: 5px;
 }

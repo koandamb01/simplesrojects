@@ -12,73 +12,98 @@
 <body>
     <div class="container">
         <h1> - Fake Credit or Debit Card</h1>
+        <p>* This is a mock Debit system, it does not record any information. Simply type random numbers to display them in the card. *</p><br>
         <div class="card">
             <h3>Bank of Mohamed</h3>
 
             <img src="img/card_chip.png" alt="card chip" width="92" height="92">
 
             <div class="card-number">
-                <a href="" id="a1"></a>
-                <a href="" id="a1"></a>
-                <a href="" id="a1"></a>
-                <a href="" id="a1"></a>
+                <a href="" id="a1">****</a>
+                <a href="" id="a2">****</a>
+                <a href="" id="a3">****</a>
+                <a href="" id="a4">****</a>
             </div>
 
             <ul>
                 <li><a>DEBIT</a></li>
-                <li><a id="Experiration">/</a></li>
+                <li><a id="Experiration">MM/DD</a></li>
                 <li><a>GOODTHRU</a></li>
             </ul>
 
-            <h4>Mamadou A Diallo</h4>
-            <h1>VISA</h1>
+            <h4 id="fullName">Full Name</h4>
+            <div class="border">
+                <h1>VISA</h1>
+            </div>
         </div>
 
         <div class="card-input">
             <div>
                 <label>Card Number:</label>
-                <input type="text" id="cardNumber" placeholder="Enter card number..">
+                <input type="number" id="cardNumber" placeholder="Enter card number..">
             </div>
 
             <div>
                 <label>Card Holder Name:</label>
-                <input type="text" placeholder="Enter full Name..">
+                <input type="text" id="inputName" placeholder="Enter full Name..">
             </div>
 
             <div>
                 <label>Card Experition:</label>
-                <input type="text" placeholder="MM/DD..">
+                <input type="text" id="inputExpiration" placeholder="MM/DD..">
             </div>
 
             <div>
-                <button>Reset</button>
+                <button onclick="reloadPage()">Reset</button>
             </div>
         </div>
     </div>
 
     <script>
+        /* Declare a tag element for the number to display */
         var a1 = document.getElementById("a1");
-        var a2 = document.getElementById("a1");
+        var a2 = document.getElementById("a2");
+        var a3 = document.getElementById("a3");
+        var a4 = document.getElementById("a4");
+        /* Declare variable for fullname element */
+        var fullname = document.getElementById("fullName");
+        /* Declare variable for card expiration date element */
+        var experiration = document.getElementById("Experiration");
 
+        /* Declare the card input number, input name and input expiration element */
         var cardNumber = document.getElementById("cardNumber");
+        var inputName = document.getElementById("inputName");
+        var inputExpiration = document.getElementById("inputExpiration");
 
+        /* Use event listener to listen for user card number input */
         cardNumber.addEventListener("keyup", function() {
             var number = cardNumber.value;
-
-            for (i = 0; i < number.length; i++) {
-
-                if (i <= 3) {
-                    a1.innerHTML = number;
-                } else if (i <= 7) {
-                    a2.innerHTML = number;
-                }
-
-            }
-
-
+            /* Display the number input into the card */
+            a1.innerHTML = number.substr(0, 4);
+            a2.innerHTML = number.substr(4, 4);
+            a3.innerHTML = number.substr(8, 4);
+            a4.innerHTML = number.substr(12, 4);
         });
-    </script>
 
+        /* Use even listener to listen for user card expiration input */
+        inputExpiration.addEventListener("keyup", () => {
+            var expired = inputExpiration.value
+
+            experiration.innerHTML = expired.substr(0, 5);
+        });
+
+
+        /* Use event listener to listen for full name input*/
+        inputName.addEventListener("keyup", () => {
+            name = inputName.value;
+            fullname.innerHTML = name.substr(0, 16);
+        });
+
+
+        function reloadPage() {
+            location.reload();
+        }
+    </script>
 
 </body>
 
