@@ -1,0 +1,95 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+.section-header {
+    position: relative;
+    opacity: 0.80;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*
+        fixed = parallax;
+        scroll = normal;
+    */
+    background-attachment: fixed;
+}
+
+.section-header {
+    background-image: url("../img/image4.png");
+    min-height: 600px;
+}
+
+.nav {
+    overflow: hidden;
+}
+
+.nav-right {
+    float: right;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: bold;
+}
+
+.nav a:hover {
+    color: #ff3300;
+}
+
+nav a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.active {
+    border-bottom: 3px solid #ff3300;
+}
+
+.nav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .nav a:not(:first-child) {
+        display: none;
+    }
+    .nav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav.responsive {
+        position: relative;
+    }
+    .nav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}

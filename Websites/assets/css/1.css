@@ -1,0 +1,294 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+.nav {
+    overflow: hidden;
+}
+
+.nav-right {
+    float: right;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: bold;
+}
+
+.nav a:hover {
+    color: #ff3300;
+}
+
+nav a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.active {
+    border-bottom: 3px solid #ff3300;
+}
+
+.nav .icon {
+    display: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-box {
+    flex-basis: 30%;
+    padding: 70px 0px;
+}
+
+.img-shadow {
+    background-color: white;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+hr {
+    border: none;
+    height: 50px;
+    width: 100%;
+    height: 50px;
+    margin-top: 0;
+    box-shadow: 0 20px 20px -20px #333;
+    margin: -50px auto 10px;
+}
+
+
+/*     ------------------  */
+
+.pimg1,
+.pimg2,
+.pimg3 {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*
+        fixed = parallax;
+        scroll = normal;
+    */
+    background-attachment: fixed;
+}
+
+.pimg1 {
+    background-image: url("../img/image5.jpg");
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url("../img/image4.png");
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image: url("../img/image1.jpg");
+    min-height: 400px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #666;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.ptext .border.trans {
+    background-color: transparent;
+}
+
+.projects {
+    overflow: hidden;
+    background-color: #282e34;
+    margin: auto;
+    text-align: center;
+}
+
+.projects a {
+    text-decoration: none;
+    color: #666;
+    font-size: 17px;
+    padding: 14px 16px;
+}
+
+.projects a:hover {
+    background-color: #ff3300;
+    border-radius: 20px;
+    color: #f4f4f4;
+}
+
+.traversy a {
+    text-decoration: none;
+    color: #ff3300;
+    font-size: 20px;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+/* Any screen under 568px will be affect */
+
+@media(max-width:568px) {
+    .pimg1,
+    .pimg2,
+    .pimg3 {
+        background-attachment: scroll;
+    }
+    .section {
+        padding: 10px 5px 5px 5px;
+    }
+    .projects {
+        background-color: #282e34;
+    }
+    .projects a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: #666;
+        font-size: 15px;
+        padding: 8px;
+    }
+    .ptext {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        color: #000;
+        font-size: 18px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+    }
+}
+
+
+/* Projects Page CSS */
+
+.project-list {
+    overflow: hidden;
+}
+
+.project-list a {
+    color: #ff9966;
+    display: block;
+    padding: 10px;
+}
+
+.nav {
+    color: #333;
+    text-align: right;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+/* End Projects CSS */
+
+
+/* Contact CSS */
+
+.contact-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2);
+    max-width: 320px;
+    margin: auto;
+    font-family: arial;
+    background: #ffffff;
+    text-align: center;
+}
+
+.contact-card h1,
+.contact-card h2,
+.contact-card h3,
+.contact-card p {
+    padding: 6px;
+    color: black;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+#overlay .links a {
+    padding: 5px;
+    font-size: 25px;
+    color: black;
+}
+
+footer {
+    background: black;
+    height: 20px;
+    padding: 15px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding-top: 8%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/* End Contact CSS */
