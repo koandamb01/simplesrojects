@@ -13,15 +13,18 @@
 </head>
 
 <body>
+
     <div class="pimg1" id="home">
-        <div class="container">
-            <div class="nav" id="myTopnav">
-                <a href="#home">Home</a>
+        <div class="nav-container">
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="active">Home</a>
                 <a href="#project">Project</a>
                 <a href="#contact">Contact</a>
+                <a href="#about">About</a>
                 <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
             </div>
         </div>
+
         <div class="ptext" onclick="on()">
             <span class="border">
                 Mohamed Koanda
@@ -106,7 +109,7 @@
             </div>
             <br><br>
             <div class="btn-more">
-                <a href="#">See more projects > > ></a>
+                <a href="projects.html">See more projects > > ></a>
             </div>
         </div>
     </section>
@@ -153,7 +156,6 @@
             </span>
         </div>
     </div>
-
     <script>
         function on() {
             document.getElementById("overlay").style.display = "block";
@@ -165,10 +167,10 @@
 
         function myFunction() {
             var x = document.getElementById("myTopnav");
-            if (x.className === "nav") {
+            if (x.className === "topnav") {
                 x.className += " responsive";
             } else {
-                x.className = "nav";
+                x.className = "topnav";
             }
         }
     </script>

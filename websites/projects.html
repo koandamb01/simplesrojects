@@ -5,30 +5,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/project.css">
     <title>Mohamed | Projercts</title>
 </head>
 
 <body>
-    <div class="nav">
-        <a href="index.html">About</a>
-        <a href="#">Contact</a>
-        <a href="#">GitHub</a>
+
+    <div class="tab">
+        <a href="home.html" style="float:right; margin:8px;">Home</a><br>
+        <button class="tablinks" onclick="openProject(event, 'bookmark')" id="defaultOpen">Bookmark</button>
+        <button class="tablinks" onclick="openProject(event, 'numberfact')">Number Fact</button>
+        <button class="tablinks" onclick="openProject(event, 'mockcard')">MockCard</button>
     </div>
-    <hr>
 
+    <div id="bookmark" class="tabcontent">
+        <h2>Bookmark</h2>
+        <div class="flex-container">
+            <div class="box1">
+                <h3>Idea!</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eveniet sequi molestias eius tenetur modi dolorum praesentium, suscipit omnis dolorem incidunt exercitationem? Voluptates, exercitationem recusandae delectus sapiente perspiciatis
+                    mollitia quidem.</p>
+            </div>
 
-    <div class="container">
-        <div class="project-list">
-            <a href="NumberFacts/number_fact.html" target="_blank">1. Number Fact</a>
-            <a href="Displaycard/index.html" target="_blank">2. Mock Debit Card</a>
-            <a href="WeightConverter/weightConverter.html" target="_blank">3. Weight Converter</a>
-            <a href="Bookmark/bookmark.html" target="_blank">4. Bookmark Websites</a>
-            <a href="Pricing_Tables/pricing.html" target="_blank">5. Sample Pricing Table</a>
-            <a href="Filterablelist/filterable_list.html" target="_blank">6. Filterable Contact</a>
-            <a href="ResponsiveForm/contact.html" target="_blank">7. Mock Contact Form</a>
+            <div class="box2">
+                <h3>Description</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nobis id voluptate excepturi vel neque eos ea culpa? Tenetur quod eum qui natus repellat molestiae doloremque ad dignissimos in ducimus.</p>
+            </div>
+
+            <div class="box3">
+                <h3>Tool used</h3>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </div>
+        </div>
+        <br>
+        <div class="img-shadow">
+            <img src="assets/img/bookmark.png" width="500" height="450" style="border-radius:10px;">
         </div>
     </div>
+
+
+    <div id="numberfact" class="tabcontent">
+        <h2>Number Fact</h2>
+        <div class="flex-container">
+            <div class="box1">
+                <h3>Idea!</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eveniet sequi molestias eius tenetur modi dolorum praesentium, suscipit omnis dolorem incidunt exercitationem? Voluptates, exercitationem recusandae delectus sapiente perspiciatis
+                    mollitia quidem.</p>
+            </div>
+
+            <div class="box2">
+                <h3>Description</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nobis id voluptate excepturi vel neque eos ea culpa? Tenetur quod eum qui natus repellat molestiae doloremque ad dignissimos in ducimus.</p>
+            </div>
+
+            <div class="box3">
+                <h3>Tool used</h3>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </div>
+        </div>
+        <br>
+        <div class="img-shadow">
+            <img src="assets/img/numberfact.png" width="500" height="450" style="border-radius:10px;">
+        </div>
+    </div>
+
+
+    <div id="mockcard" class="tabcontent">
+        <h2>Mock Credit Card</h2>
+        <div class="flex-container">
+            <div class="box1">
+                <h3>Idea!</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eveniet sequi molestias eius tenetur modi dolorum praesentium, suscipit omnis dolorem incidunt exercitationem? Voluptates, exercitationem recusandae delectus sapiente perspiciatis
+                    mollitia quidem.</p>
+            </div>
+
+            <div class="box2">
+                <h3>Description</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nobis id voluptate excepturi vel neque eos ea culpa? Tenetur quod eum qui natus repellat molestiae doloremque ad dignissimos in ducimus.</p>
+            </div>
+
+            <div class="box3">
+                <h3>Tool used</h3>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </div>
+        </div>
+        <br>
+        <div class="img-shadow">
+            <img src="assets/img/mockcard.png" width="500" height="450" style="border-radius:10px;">
+        </div>
+    </div>
+
+
+    <script>
+        function openProject(evt, projectName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(projectName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,129 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    background-color: #ccc;
+}
+
+* {
+    box-sizing: border-box
+}
+
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 20%;
+    height: 100%;
+}
+
+
+/* Style the button inside the tab */
+
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+
+/* change the background color of buttons on hover */
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+
+/* Create an active/current "tab button class */
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 80%;
+    border-left: none;
+    height: 300px;
+    text-align: center;
+}
+
+.btn-more {
+    background-color: #333;
+    width: 150px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-more a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Flex Display CSS */
+
+@media screen and (min-width:750px) {
+    .flex-container {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.box1,
+.box2,
+.box3 {
+    background-color: white;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    flex-basis: 30%;
+}
+
+.flex-container {
+    padding: 40px 0px;
+}
+
+.box1 {
+    background-color: #2CC88F;
+}
+
+.box2 {
+    background-color: #9F89FC;
+}
+
+.box3 {
+    background-color: #E4D747;
+}
+
+.img-shadow {
+    text-align: center;
+}
+
+.img-shadow img {
+    width: 40%;
+    height: auto;
+}
+
+li {
+    list-style-type: none;
+}
