@@ -24,6 +24,8 @@
 
 <body class="bg-dark">
     <div class="container">
+        <br>
+        <h1 class="text-center" style="color:white;">Trivia Game</h1>
         <div class="row">
             <!-- Begin number random facts -->
             <div class="col-md-4">
@@ -100,7 +102,7 @@
 
         let yearInput = document.querySelector('#yearInput');
         yearInput.addEventListener('input', function() {
-            let year = dateInput.value;
+            let year = yearInput.value;
             if (year != '') {
                 let option = '/year';
                 getFactAjax(Yearfact, YearfactText, yearInput, option)

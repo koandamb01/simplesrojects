@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add & Remove Course</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="text-primary text-center">Example of forms add and remove inputs fields</h1>
+        <div class="well text-center">
+            <p>Please click on the plus sign(+) to add more courses and minus sign(-) to remove courses.</p>
+        </div>
+
+        <span id="CourseErr"></span>
+        <div class="well">
+            <div class="row" id="fields">
+                <div class="col-md-3" id="field1">
+                    <div class="form-group">
+                        <label>Course 1</label>
+                        <input type="text" class="form-control" name="course1">
+                    </div>
+                </div>
+
+                <div class="col-md-3" id="field2">
+                    <div class="form-group">
+                        <label>Course 2</label>
+                        <input type="text" class="form-control" name="course2">
+                    </div>
+                </div>
+
+                <div class="col-md-3" id="field3">
+                    <div class="form-group">
+                        <label>Course 3</label>
+                        <input type="text" class="form-control" name="course3">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group" id="field4">
+                        <label>Course 4</label>
+                        <input type="text" class="form-control" name="course4">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <a class="glyphicon glyphicon-minus" onclick="removefields()"></a>
+                </div>
+
+                <div class="col-md-6">
+                    <a class="glyphicon glyphicon-plus pull-right" onclick="addfields()"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>Copyright Mohamed Koanda, &copy; March 11th, 2018</p>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+
+</html>

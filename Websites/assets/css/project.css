@@ -39,6 +39,11 @@ html {
     font-size: 17px;
 }
 
+.tab a {
+    text-decoration: none;
+    color: #ff3300;
+}
+
 
 /* change the background color of buttons on hover */
 
