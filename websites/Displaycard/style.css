@@ -11,6 +11,10 @@ body {
     margin: auto;
 }
 
+.flex-container {
+    display: flex;
+}
+
 p {
     color: red;
     text-align: center;
@@ -91,7 +95,7 @@ li a {
 }
 
 .card-input input {
-    width: 500px;
+    width: 300px;
     height: 35px;
     display: block;
     border-radius: 5px;
@@ -99,7 +103,6 @@ li a {
 
 .card-input button {
     background-color: #b3d1ff;
-    margin-left: 84%;
     width: 100px;
     height: 30px;
     border-radius: 5px;
