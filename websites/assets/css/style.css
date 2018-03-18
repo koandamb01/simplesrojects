@@ -94,11 +94,16 @@ html {
     padding: 40px 0px;
 }
 
-.container-box h2 a {
+.container-box h2 {
+    color: #666;
+}
+
+.container h2 a {
+    color: #666;
     text-decoration: none;
 }
 
-.container-box h2 a:hover {
+.container h2 a:hover {
     color: #ff3300;
 }
 
@@ -116,6 +121,19 @@ hr {
     margin-top: 0;
     box-shadow: 0 20px 20px -20px #333;
     margin: -50px auto 10px;
+}
+
+#myBtn {
+    background-color: #ff3300;
+    width: 200px;
+    height: 35px;
+    font-size: 15px;
+    margin: auto;
+    padding-top: 8px;
+    border-radius: 5px;
+    border: 1px solid #ff3300;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
 .btn-more {
@@ -140,8 +158,8 @@ hr {
 .pimg1,
 .pimg2,
 .pimg3 {
-    position: relative;
-    opacity: 0.70;
+    /*position: relative;*/
+    /*opacity: 0.70;*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -203,6 +221,37 @@ hr {
 
 .ptext .border.trans {
     background-color: transparent;
+}
+
+.ptext2 {
+    text-align: center;
+    color: #fff;
+    font-size: 27px;
+    padding-top: 170px;
+    padding-bottom: 200px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ctext {
+    /*top: 50%;*/
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    padding-top: 25%;
+    padding-bottom: 26%;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ctext .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    cursor: pointer;
 }
 
 .projects {
