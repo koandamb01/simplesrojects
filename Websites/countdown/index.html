@@ -12,13 +12,24 @@
 <body>
     <section class="landing">
         <div class="landing-inner">
-            <img src="img/logo.png" alt="Birthday Cake">
             <p>Birthdays are the best</p>
-            <h1>Birthday Coming Soon</h1>
+            <div class="birthday">
+                <!--label for="birthday">When is your birthday?</label-->
+                <div class="box1">
+                    <button onclick="reloadPage()">Try again</button>
+                </div>
+                <div class="box2">
+                    <input type="date" name="birthday" id="hbd">
+                </div>
+                <div class="box3">
+                    <button onclick="comingSoon()">Start Count</button>
+                </div>
+            </div>
+            <h1>Coming Soon</h1>
             <div class="countdown"></div>
         </div>
-    </section>
 
+    </section>
     <script src="main.js"></script>
 </body>
 
